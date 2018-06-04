@@ -58,7 +58,7 @@ script:
   - adb devices
   - adb -s emulator-5554 install app/app-release.apk
   - android list targets
- # - which java
+  # - which java
   #- cd Appium && mvn clean compile assembly:single
   #- appium --address 127.0.0.1 --port 4723
   - travis_wait 20 java -jar AlertDialouge.jar
@@ -75,7 +75,7 @@ deploy:
   testers-groups: Bank_Sinarmas
 
 after_deploy:
-  #- apache-jmeter-3.2/bin/./jmeter -n -t users.jmx
+  - apache-jmeter-3.2/bin/./jmeter -n -t users.jmx
   - java -jar APITester.jar 
   
 notifications:
