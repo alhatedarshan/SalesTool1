@@ -11,7 +11,7 @@ public class TestGit {
 
 	private static void displayGreeting(){
 		System.out.println("Heloo Happy Sales People");
-		System.out.println("This App shows Sales Data");
+		System.out.println("This App shows Saales Data");
 		System.out.println("This App shows Sales Data1111");
 		System.out.println("This App shows Sales Data22");
 		System.out.println("This App is integrated with Github");

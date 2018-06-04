@@ -3,6 +3,6 @@ public class SalesData {
 	
 	public void display(){
 		System.out.println("Implement Sales Project Data");
-		System.out.println("Implement Sales Project Info");
+		System.out.println("Implaement Sales Project Info");
 	}
 }
