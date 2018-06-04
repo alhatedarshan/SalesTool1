@@ -1,4 +1,3 @@
-
 public class TestGit {
 
 	public static void main(String[] args) {
@@ -12,6 +11,6 @@ public class TestGit {
 	private static void displayGreeting(){
 		System.out.println("Heloo Happy Sales People");
 		System.out.println("This App shows Sales Data");
-		System.out.println("This is first test for Todaay/n/n This us a Demo");
+		System.out.println("This is first test for Today /n/n This us a Demo");
 	}
 }
