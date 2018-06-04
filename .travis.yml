@@ -61,7 +61,7 @@ script:
   #- cd Appium && mvn clean compile assembly:single
   #- appium --address 127.0.0.1 --port 4723
   - travis_wait 20 java -jar AlertDialouge.jar
-  - ls
+  - ls -l
 
 deploy:
   provider: testfairy
