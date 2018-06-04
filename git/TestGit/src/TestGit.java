@@ -13,7 +13,7 @@ public class TestGit {
 		System.out.println("Heloo Happy Sales People");
 		System.out.println("This App shows Sales Data");
 		
-		System.out.println("Test5");
+		System.out.println("Test7");
 		System.out.println("This is first test for Todaay");
 	}
 }
