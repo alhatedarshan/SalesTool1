@@ -65,15 +65,15 @@ script:
   #- travis_wait 20 java -jar AlertDialouge.jar
   #- ls
 
-deploy:
-  provider: testfairy
-  api-key: "aa2f450c873d306064c9e227872fab23fac448ec"
-  app-file: app/app-release.apk
-  keystore-file: alertDialog_key.jks
-  storepass: Quark@123
-  alias: key0
-  skip_cleanup: true
-  testers-groups: Bank_Sinarmas
+#deploy:
+  #provider: testfairy
+  #api-key: "aa2f450c873d306064c9e227872fab23fac448ec"
+  #app-file: app/app-release.apk
+  #keystore-file: alertDialog_key.jks
+  #storepass: Quark@123
+  #alias: key0
+  #skip_cleanup: true
+  #testers-groups: Bank_Sinarmas
 
 after_deploy:
   - apache-jmeter-4.0/bin/./jmeter -n -t users.jmx
