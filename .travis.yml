@@ -44,7 +44,7 @@ android:
     - 'Changes made to do Commit'
 
 before_script:
-  - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
+ # - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
   - adb devices
@@ -74,7 +74,7 @@ deploy:
   testers-groups: Bank_Sinarmas
 
 after_deploy:
-  - apache-jmeter-3.2/bin/./jmeter -n -t users.jmx
+  - apache-jmeter-4.0/bin/./jmeter -n -t users.jmx
   - java -jar APITester.jar 
   
 notifications:
