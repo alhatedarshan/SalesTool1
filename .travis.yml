@@ -54,8 +54,8 @@ before_script:
   - ls
   - pwd
 
-script:
-  - appium-doctor
+#script:
+  #- appium-doctor
   #- adb devices
   #- adb -s emulator-5554 install app/app-release.apk
   #- android list targets
