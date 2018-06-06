@@ -27,7 +27,7 @@ android:
     - build-tools-25.0.2
 
     # The SDK version used to compile your project
-    - android-25
+    - android-27
 
     # Additional components
     - extra-google-google_play_services
@@ -81,4 +81,5 @@ after_deploy:
   
 notifications:
     slack: qkdevops:tplgplCVfk0dVVW3lxDMmFM8
+    
     
