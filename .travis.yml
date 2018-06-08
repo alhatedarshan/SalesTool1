@@ -46,34 +46,34 @@ android:
     - 'Changes made to do Commit'
 
 before_script:
-  #- echo no | android create avd --force -n test -t android-27 --abi armeabi-v7a
-  #- emulator -avd test -no-skin -no-audio -no-window &
-  #- android-wait-for-emulator
-  #- adb devices
-  #- adb shell input keyevent 82 &
+  - echo no | android create avd --force -n test -t android-27 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb devices
+  - adb shell input keyevent 82 &
   - ls
   - pwd
 
-#script:
-  #- appium-doctor
-  #- adb devices
-  #- adb -s emulator-5554 install app/app-release.apk
-  #- android list targets
-  # - which java
-  #- cd Appium && mvn clean compile assembly:single
-  #- appium --address 127.0.0.1 --port 4723
-  #- travis_wait 20 java -jar AlertDialouge.jar
-  #- ls
+script:
+  - appium-doctor
+  - adb devices
+  - adb -s emulator-5554 install app/app-release.apk
+  - android list targets
+  - which java
+  - cd Appium && mvn clean compile assembly:single
+  - appium --address 127.0.0.1 --port 4723
+  - travis_wait 20 java -jar AlertDialouge.jar
+  - ls
 
-#deploy:
-  #provider: testfairy
-  #api-key: "aa2f450c873d306064c9e227872fab23fac448ec"
-  #app-file: app/app-release.apk
-  #keystore-file: alertDialog_key.jks
-  #storepass: Quark@123
-  #alias: key0
-  #skip_cleanup: true
-  #testers-groups: Bank_Sinarmas
+deploy:
+  provider: testfairy
+  api-key: "aa2f450c873d306064c9e227872fab23fac448ec"
+  app-file: app/app-release.apk
+  keystore-file: alertDialog_key.jks
+  storepass: Quark@123
+  alias: key0
+  skip_cleanup: true
+  testers-groups: Bank_Sinarmas
 
 after_deploy:
   - apache-jmeter-4.0/bin/./jmeter -n -t users.jmx
